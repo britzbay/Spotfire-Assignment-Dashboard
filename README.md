@@ -98,7 +98,7 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
 
 ---
 
-## Dashboard Features
+## Dashboard Architecture/Features
 ### 1. **Overview Page**
    - **Visuals**:
      - Key metrics summary cards: Total COVID-19 deaths and death due to other diseases.
@@ -126,6 +126,24 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
      - Bubble overlay for weather events (e.g., hurricanes, heatwaves).
    - **Interactivity**:
      - Tooltips showing demographic and weather details for each state.
+
+---
+## Handling User Interactions
+
+### **1. Synchronization**
+- All visualizations are interlinked, so user selections in one visualization automatically update others.
+- Example:
+  - Selecting `Texas` in the State filters all charts and tables to show data for Texas.
+
+### **2. Real-Time Calculations**
+- Using Spotfire data functions (Python scripts) to predict key metrics, such as:
+  - Actual vs Predited Economic Index.
+  - K_Means Clustering used to group data into clusters.
+
+### **3. Performance Optimization**
+To handle large datasets and ensure responsiveness:
+- Using Spotfire in-memory data tables for fast querying.
+- Calculations are pre-aggregated where possible, reducing runtime computations.
 
 ---
 
