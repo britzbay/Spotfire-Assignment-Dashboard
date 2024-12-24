@@ -24,7 +24,7 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
 ---
 ## Data Ingestion
 ### Tools Used
-- **Spotfire Data Connector(ODATA) **:
+- **Spotfire Data Connector(ODATA)**:
   - Configured to load COVID-19 data directly API as ODATA.
 - **Python Scripts via Spotfire Data Functions**:
   -Configured to load US Census and Weather data directly from API into Spotfire Data Function and convert into data table .
