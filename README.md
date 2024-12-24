@@ -22,7 +22,69 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
    - Granularity: State level, aggregated monthly (2020–2023).
 
 ---
+## Data Ingestion
+### Tools Used
+- **Spotfire Data Connector(ODATA) **:
+  - Configured to load COVID-19 data directly API as ODATA.
+- **Python Scripts via Spotfire Data Functions**:
+  -Configured to load US Census and Weather data directly from API into Spotfire Data Function and convert into data table .
+  - Automated data loading and initial preprocessing.
+  
+### Process
+1. **COVID-19 Data**:
+   - Imported Weekly deaths from 2020 to 2023 into Spotfire.
+   
+2. **US Census Data**:
+   - Imported data via API containing demographic and economic data.
+   - Mapped `State` and `Year` as the primary key for joining with other datasets.
 
+3. **Weather Data**:
+   - Imported single day weather data aggregated by state.
+---
+---
+
+## Data Transformation
+### A. Cleaning
+1. **Missing Values**:
+   - COVID-19: Filled missing `Vaccination Rate` with state-level averages.
+   - Weather: Interpolated missing values for `Humidity` and `Precipitation` using monthly averages.
+
+2. **Standardization**:
+   - Dates converted to the format `YYYY-MM-DD`.
+   - State names standardized to title case (e.g., `New York`).
+
+3. **Filtering**:
+   - Removed non-state territories (e.g., Guam, Puerto Rico) to focus on US states.
+
+---
+
+### B. Joining
+- Merged datasets using:
+  - **Primary Keys**: `State` and `Date`.
+  - **Join Types**:
+    - **Left Inner Join** for COVID-19 and Weather data.
+    - **Left Join** for Census data with the merged COVID-19/Weather dataset.
+
+---
+
+### C. Feature Engineering
+1. **Derived Metrics**:
+   - `Covid Deaths Per Capita` = `Covid Deaths` ÷ `Population`.
+   - `Deaths Per Capita` = `Deaths` ÷ `Population`.
+   - `Weather-COVID Interaction`: `Humidity * Avg Temperature`.
+
+2. **Categorical Variables**:
+   - Grouped income into `Low`, `Medium`, and `High` categories using percentiles.
+
+3. **Time-Based Aggregations**:
+   - Rolled daily COVID-19 data into monthly averages for consistency with Weather data.
+
+---
+
+### D. Normalization
+- Applied **z-score normalization** to numeric variables (e.g., population, case rates) to ensure uniform scaling across features.
+
+---
 ## Approach
 ### Data Integration and Preprocessing
 1. **Data Cleaning**:
