@@ -41,8 +41,6 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
 3. **Weather Data**:
    - Imported single day weather data aggregated by state.
 ---
----
-
 ## Data Transformation
 ### A. Cleaning
 1. **Missing Values**:
