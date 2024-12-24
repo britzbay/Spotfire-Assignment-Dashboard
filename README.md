@@ -1,6 +1,6 @@
-# Solution: Spotfire Dashboard for COVID-19, US Census, and Weather Data
+# Solution: Spotfire Dashboard for COVID-19, US Census, and Open Weather Data
 
-## Problem Statement
+## Objective
 Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather data to analyze relationships between demographic, health, and environmental factors over time and across different states.
 
 ---
