@@ -18,7 +18,7 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
 
 3. **Weather Data**:
    - Metrics: Temperature, precipitation, humidity, extreme weather events.
-   - Source: [National Weather Service](https://www.weather.gov/).
+   - Source: [Open Weather](https://openweathermap.org/).
    - Granularity: State level, aggregated monthly (2020–2023).
 
 ---
@@ -186,12 +186,8 @@ To handle large datasets and ensure responsiveness:
 ## References
 1. [CDC COVID-19 Data Tracker](https://covid.cdc.gov/)
 2. [US Census Bureau](https://www.census.gov/)
-3. [National Weather Service](https://www.weather.gov/)
+3. [Open Weather](https://openweathermap.org/)
 
 ---
 
-## How to Access the Dashboard
-1. Open Spotfire.
-2. Navigate to the shared library: `Company Workspace > Dashboards > COVID19_Census_Weather`.
-3. Use the provided filters and tools to interact with the data.
 
