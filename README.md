@@ -48,11 +48,11 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
    - Weather: Interpolated missing values for `Humidity` and `Precipitation` using monthly averages.
 
 2. **Standardization**:
-   - Dates converted to the format `YYYY-MM-DD`.
+   - Dates converted to the format `YYYY`.
    - State names standardized to title case (e.g., `New York`).
 
 3. **Filtering**:
-   - Removed non-state territories (e.g., Guam, Puerto Rico) to focus on US states.
+   - Removed non-state territories (e.g., Guam, Puerto Rico, New York City) to focus on US states.
 
 ---
 
