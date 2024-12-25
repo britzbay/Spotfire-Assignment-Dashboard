@@ -110,32 +110,32 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
 ## Dashboard Architecture/Features
 ### 1. **Overview Page**
    - **Visuals**:
-     - Key metrics summary cards: Total COVID-19 deaths and death due to other diseases.
-     - A time-series chart for COVID-19 trends (deaths) over time.
-   - **Interactivity**:
-     - Filters for `State`, `Year`, and `Month`.
+     - Landing Page describing ojective of the dashboard.
+     
 
-### 2. **Demographic Analysis Page**
+### 2. **COVID 19 Deaths Analysis Page**
    - **Visuals**:
-     - Bar chart comparing COVID-19 case rates across income levels and age groups.
-     - Heatmap showing the correlation between demographic factors and COVID-19 deaths.
+     - Line chart comparing COVID-19 case rates across different yearss.
+     - Choropleth map showing the correlation between demographic factor such as Population and COVID-19 deaths.
    - **Interactivity**:
-     - Dropdowns to select specific demographic variables (e.g., median income, unemployment rate).
+     - Dropdowns to select specific variables (State, Year).
 
 ### 3. **Weather Impact Page**
    - **Visuals**:
-     - Line chart overlaying average monthly temperature and COVID-19 deaths.
-     - Scatter plot of precipitation vs. COVID-19 deaths, and overall death cases.
+     - Line chart overlaying average minimum and maximum temperature.
+     - Choropleth map of average temperature for different states.
+     - Tree Map showing overall weather coverage for different states.
    - **Interactivity**:
-     - Date slider to explore specific time periods.
+     -  Dropdowns to select specific variables (State, Year).
 
-### 4. **Geospatial Page**
+### 4. **US Census Data Page**
    - **Visuals**:
-     - Choropleth map displaying per-capita COVID-19 deaths and overall deaths by state.
-     - Bubble overlay for weather events (e.g., hurricanes, heatwaves).
+     - Scatterplot chart overlaying the  median home value and gross home rent.
+     - Bar Chart to visualize different population such as Black, White and Hispanic.
    - **Interactivity**:
-     - Tooltips showing demographic and weather details for each state.
-
+     -  Dropdowns to select specific variables (State, Year).
+     -  The Population breakdown can be visualized either in Bar Chart or Line Chart.
+       
 ---
 ## Handling User Interactions
 
