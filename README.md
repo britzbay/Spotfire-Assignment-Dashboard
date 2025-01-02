@@ -101,7 +101,7 @@ Spotfire dashboard that integrates COVID-19 data, US Census data, and Weather da
 ## Python Scripts in used as Data Function
 - **Open Weather Data**: This python script is used to get weather data from Open Weather API. The variables are state,capital,temperature, feels like,min temperature, max temperature,pressure,humidity,visibility,weather description,cloudiness,wind speed,wind direction,latitude,longitude. The funcion parses the data into data frame which is passed as output parameter into table.              
 - **US Census Data Function**: This python script is used to get US Census data from US Census API. The variables are state,total population,median household income,gini index (income inequality),median gross rent,median home value,median age,unemployment rate,white population,black or african american population,hispanic or latino population.The funcion parses the data into data frame which is passed as output parameter into table.
-- **Economic Growth- Linear regression ML Algorithm**: This python script is contains Linear regression algorithm which is used to predict economic index. 
+- **Random Forest Algorithm**: This python script contains Random Forest Algorithm to predict covid case rate based on population, Household Income, Temperature, Humidity. 
 - **K-Means Clustering ML Algorithm**: This python script is contains K-Means Clustering algorithm which is cluster data using variables such as population,age,unemployment rate,GDP,home value,home rent and median income. 
 ---
 
